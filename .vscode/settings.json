@@ -1,0 +1,34 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "flexgymConnection",
+            "database": "flexgym",
+            "username": "root",
+            "password": "boumsclan01"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {
+                    "ca": "/Users/Nexus/Downloads/ca.pem"
+                }
+            },
+            "previewLimit": 50,
+            "server": "mysql-3906f8ab-sascode-tpc.k.aivencloud.com",
+            "port": 24690,
+            "driver": "MySQL",
+            "name": "StrapiDB",
+            "database": "defaultdb",
+            "username": "avnadmin"
+        }
+    ]
+}
