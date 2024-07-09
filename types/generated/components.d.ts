@@ -24,7 +24,7 @@ export interface HomepageLogo extends Schema.Component {
     name: Attribute.String & Attribute.Required;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    url: Attribute.String;
+    url: Attribute.Text;
   };
 }
 

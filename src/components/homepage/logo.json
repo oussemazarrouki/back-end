@@ -22,7 +22,8 @@
       ]
     },
     "url": {
-      "type": "string"
+      "type": "text",
+      "required": false
     }
   }
 }
