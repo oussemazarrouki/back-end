@@ -1,0 +1,70 @@
+{
+    "kind": "collectionType",
+    "collectionName": "users-permissions_user",
+    "info": {
+      "name": "user",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true
+    },
+    "attributes": {
+      "username": {
+        "type": "string",
+        "minLength": 3,
+        "unique": true
+      },
+      "email": {
+        "type": "email",
+        "minLength": 6,
+        "lowercase": true,
+        "unique": true
+      },
+      "provider": {
+        "type": "string"
+      },
+      "password": {
+        "type": "password",
+        "minLength": 6,
+        "private": true
+      },
+      "resetPasswordToken": {
+        "type": "string",
+        "private": true
+      },
+      "confirmationToken": {
+        "type": "string",
+        "private": true
+      },
+      "confirmed": {
+        "type": "boolean",
+        "default": false
+      },
+      "blocked": {
+        "type": "boolean",
+        "default": false
+      },
+      "role": {
+        "model": "role",
+        "via": "users"
+      },
+      "phoneNumber": {
+        "type": "string"
+      },
+      "address": {
+        "type": "text"
+      },
+      "events": {
+        "collection": "event",
+        "via": "participants",
+        "dominant": true
+      },
+      "tournaments": {
+        "collection": "tournament",
+        "via": "participants",
+        "dominant": true
+      }
+    }
+  }
+  
